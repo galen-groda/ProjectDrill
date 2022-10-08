@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Federo&family=Inter&family=Open+Sans:wght@300;400;600&family=Potta+One&display=swap');
+%transition {
+  transition: all 0.8s ease;
+}
+%section-media {
+  @media (max-width: 991px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: calc(1440px - 150px - 150px);
+  margin: 0 auto;
+  padding: 0 15px;
+
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.header {
+  padding: 25px 0 60px;
+
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header_logo {
+      font-family: 'Potta One';
+      font-size: 38px;
+      line-height: 55px;
+      letter-spacing: -0.035em;
+      color:#565759;
+
+    }
+    .header_nav {
+      @media  (max-width: 767px) {
+      display: none;
+
+      }
+      .header_list {
+        display: flex;
+        column-gap: 35px;
+        list-style: none;
+
+        a {
+          line-height: 22px;
+          letter-spacing: -0.035em;
+          color:#697391;
+          @extend %transition;
+
+          &:hover  {
+            @extend %transition;
+            color: darkmagenta;
+          }
+
+        }
+      }
+    }
+    .header_icons {
+      display: flex;
+      column-gap: 37px;
+
+      svg {
+        fill:#6C7580;
+        @extend %transition;
+
+        &:hover {
+          @extend %transition;
+          fill: darkmagenta;
+        }
+      }
+    }
+
+  }
+
+}
+.home {
+  padding-bottom: 84px;
+
+  @extend %section-media;
+
+  .home_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+
+    .home_img {
+      background-image: url("img/main/home/home_img.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 450px;
+      width: calc(625/1110*100%);
+
+      @media (max-width: 991px) {
+        width: 100%;
+        margin-bottom: 30px;
+
+      }
+    }
+
+    .home_info {
+      max-width: calc(385/1110*100%);
+
+      @media (max-width: 991px) {
+        max-width: 100%;
+      }
+
+       h1 {
+         font-family: 'Federo';
+         font-size: 48px;
+         line-height: 60px;
+         letter-spacing: 0.02em;
+         color: #3A3A3A;
+         margin-bottom: 25px;
+
+       }
+
+       a {
+        display: inline-block;
+         padding: 8px 16px 8px 17px;
+         background: #434343;
+         border: 1px solid #434343;
+         line-height: 22px;
+         letter-spacing: -0.035em;
+         color:#FFFFFF;
+         @extend %transition;
+
+         &:hover {
+           @extend %transition;
+           color:#434343;
+           background: #FFFFFF;
+
+         }
+      }
+    }
+  }
+}
+.seller {
+  padding-bottom: 145px;
+  @extend %section-media;
+
+  .seller_container {
+
+    .seller_name {
+      font-family: 'Federo';
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 0.02em;
+      color: #3A3A3A;
+      margin-bottom: 41px;
+      text-align: center;
+    }
+    .seller_items {
+      display: flex;
+      gap: 30px;
+
+      .item {
+        height: 342px;
+        flex: 1 1 22%;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+        padding: 76px 0 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div {
+          margin: 0  auto;
+        }
+
+        .seller_text {
+
+          h3 {
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: -0.035em;
+            color: #2A2A2B;
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-family: 'Federo';
+            font-size: 14px;
+            line-height: 50px;
+            letter-spacing: 0.02em;
+            color: #8C8C8C;
+            text-align: center;
+
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+.footer_container {
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("img/footer/footer_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*position: relative;*/
+
+  .footer_logo {
+    width: 100%;
+/*    position: absolute;
+    padding-top: 61px;*/
+
+  }
+
+  .footer_nav container{
+    width: 100%;
+    display: flex;
+
+    .footer_nav {
+      display: flex;
+    }
+  }
+}
+
+// less 12 01:07:00 рек як доробляти!!!
+// спитати в Ігоря, чому не працюють падінги для контейнера
+
+
+// 09-19-22-06 14:48

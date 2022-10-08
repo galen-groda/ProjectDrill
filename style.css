@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Federo&family=Inter&family=Open+Sans:wght@300;400;600&family=Potta+One&display=swap");
+.home .home_container .home_info a:hover, .home .home_container .home_info a, .header .header_container .header_icons svg:hover, .header .header_container .header_icons svg, .header .header_container .header_nav .header_list a:hover, .header .header_container .header_nav .header_list a {
+  transition: all 0.8s ease;
+}
+
+@media (max-width: 991px) {
+  .seller, .home {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .seller, .home {
+    padding-bottom: 40px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.header {
+  padding: 25px 0 60px;
+}
+.header .header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header_container .header_logo {
+  font-family: "Potta One";
+  font-size: 38px;
+  line-height: 55px;
+  letter-spacing: -0.035em;
+  color: #565759;
+}
+@media (max-width: 767px) {
+  .header .header_container .header_nav {
+    display: none;
+  }
+}
+.header .header_container .header_nav .header_list {
+  display: flex;
+  column-gap: 35px;
+  list-style: none;
+}
+.header .header_container .header_nav .header_list a {
+  line-height: 22px;
+  letter-spacing: -0.035em;
+  color: #697391;
+}
+.header .header_container .header_nav .header_list a:hover {
+  color: darkmagenta;
+}
+.header .header_container .header_icons {
+  display: flex;
+  column-gap: 37px;
+}
+.header .header_container .header_icons svg {
+  fill: #6C7580;
+}
+.header .header_container .header_icons svg:hover {
+  fill: darkmagenta;
+}
+
+.home {
+  padding-bottom: 84px;
+}
+.home .home_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .home .home_container {
+    flex-wrap: wrap;
+  }
+}
+.home .home_container .home_img {
+  background-image: url("img/main/home/home_img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 56.3063063063%;
+}
+@media (max-width: 991px) {
+  .home .home_container .home_img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.home .home_container .home_info {
+  max-width: 34.6846846847%;
+}
+@media (max-width: 991px) {
+  .home .home_container .home_info {
+    max-width: 100%;
+  }
+}
+.home .home_container .home_info h1 {
+  font-family: "Federo";
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.02em;
+  color: #3A3A3A;
+  margin-bottom: 25px;
+}
+.home .home_container .home_info a {
+  display: inline-block;
+  padding: 8px 16px 8px 17px;
+  background: #434343;
+  border: 1px solid #434343;
+  line-height: 22px;
+  letter-spacing: -0.035em;
+  color: #FFFFFF;
+}
+.home .home_container .home_info a:hover {
+  color: #434343;
+  background: #FFFFFF;
+}
+
+.seller {
+  padding-bottom: 145px;
+}
+.seller .seller_container .seller_name {
+  font-family: "Federo";
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  color: #3A3A3A;
+  margin-bottom: 41px;
+  text-align: center;
+}
+.seller .seller_container .seller_items {
+  display: flex;
+  gap: 30px;
+}
+.seller .seller_container .seller_items .item {
+  height: 342px;
+  flex: 1 1 22%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 76px 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.seller .seller_container .seller_items .item div {
+  margin: 0 auto;
+}
+.seller .seller_container .seller_items .item .seller_text h3 {
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.035em;
+  color: #2A2A2B;
+  margin-bottom: 8px;
+}
+.seller .seller_container .seller_items .item .seller_text p {
+  font-family: "Federo";
+  font-size: 14px;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  color: #8C8C8C;
+  text-align: center;
+}
+
+.footer_container {
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("img/footer/footer_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*position: relative;*/
+}
+.footer_container .footer_logo {
+  width: 100%;
+  /*    position: absolute;
+      padding-top: 61px;*/
+}
+.footer_container .footer_nav container {
+  width: 100%;
+  display: flex;
+}
+.footer_container .footer_nav container .footer_nav {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
