@@ -179,16 +179,18 @@ a {
     .seller_items {
       display: flex;
       gap: 30px;
+      flex-wrap: wrap;
 
       .item {
         height: 342px;
-        flex: 1 1 22%;
+        flex: 1 1 calc(25% - 30px);
         background: #FFFFFF;
-        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
         padding: 76px 0 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
 
         div {
           margin: 0  auto;
@@ -214,40 +216,241 @@ a {
 
           }
         }
+
+        .info {
+          position: absolute;
+          width: 75px;
+          height: 61px;
+          top: 12px;
+          right: 0;
+
+          div {
+            background: #F29731;
+            height: 28px;
+            margin-bottom: 5px;
+            line-height: 22px;
+            letter-spacing: -0.035em;
+            color: #FFFFFF;
+            text-align: center;
+            padding-top: 4px;
+
+            &:nth-child(2) {
+              background: #9E0B0F;
+            }
+          }
+        }
+        .seller_icons {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          position:absolute;
+          right: 5px;
+          bottom: 80px;
+
+          .icon {
+            height: 27px;
+            width: 27px;
+            background: #FFFFFF;
+            border: 0.2px solid #454545;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @extend %transition;
+
+            .icon1 {
+              display: flex;
+              flex-direction: column;
+
+              svg {
+                fill: black;
+              }
+
+
+            }
+
+            svg {
+              fill: black;
+            }
+
+            &:hover {
+              @extend %transition;
+              background-color: #d7676b;
+
+              svg  {
+                fill: white;
+              }
+            }
+          }
+        }
       }
-      
+      .item1 {
+        padding: 71px 0 25px;
+      }
+      .item2 {
+        padding: 64px 0 25px;
+
+      }
+      .item3 {
+        padding: 58px 0 25px;
+
+      }
+      .item4 {
+        padding: 89px 0 25px;
+
+      }
+      .item5 {
+        padding: 60px 0 25px;
+
+      }
+      .item6 {
+        padding: 73px 0 25px;
+
+      }
+      .item7 {
+        padding: 73px 0 25px;
+
+      }
     }
+
   }
 }
 
 .footer_container {
   width: 1440px;
+  height: 559px;
   display: flex;
+  padding: 0;
   flex-direction: column;
   background-image: url("img/footer/footer_background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  /*position: relative;*/
+  position: relative;
+
 
   .footer_logo {
     width: 100%;
-/*    position: absolute;
-    padding-top: 61px;*/
+    height: 170px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.72);
+    display: flex;
+    justify-content: center;
+
+    .div {
+      width: 108px;
+      height: 65px;
+      position: absolute;
+      top: 40px;
+      font-family: 'Potta One';
+      font-size: 45px;
+      line-height: 65px;
+      letter-spacing: -0.035em;
+      color: #424346;
+
+    }
 
   }
 
-  .footer_nav container{
+  .footer_nav {
     width: 100%;
+    height: 559px;
     display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.72);
 
-    .footer_nav {
-      display: flex;
+    .list_about {
+      padding-left: 160px;
+
+      .tittle_about {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 224.68%;
+        letter-spacing: -0.035em;
+        color: #000000;
+      }
+      .content_about {
+        list-style: none;
+        font-family: 'Open Sans';
+        font-size: 20px;
+        line-height: 224.68%;
+        letter-spacing: -0.035em;
+        color: #8A8A8A;
+      }
+    }
+    .list_company {
+
+      .tittle_company {
+        font-size: 24px;
+        line-height: 224.68%;
+        letter-spacing: -0.035em;
+        color: #000000;
+      }
+      .content_company {
+        list-style: none;
+        font-size: 20px;
+        line-height: 224.68%;
+        letter-spacing: -0.035em;
+        color: #8A8A8A;
+      }
+    }
+    .list_useful {
+
+      .tittle_useful {
+        font-size: 24px;
+        line-height: 224.68%;
+        letter-spacing: -0.035em;
+        color: #000000;
+      }
+      .content_useful {
+        list-style: none;
+        font-size: 20px;
+        line-height: 224.68%;
+        letter-spacing: -0.035em;
+        color: #8A8A8A;
+      }
+    }
+    .list_follow {
+      padding-right: 140px;
+
+      .tittle_follow {
+        font-size: 24px;
+        line-height: 224.68%;
+        letter-spacing: -0.035em;
+        color: #000000;
+      }
+      .content_follow {
+        list-style: none;
+        font-size: 20px;
+        line-height: 224.68%;
+        letter-spacing: -0.035em;
+        color: #8A8A8A;
+        display: flex;
+        gap: 4px;
+      }
+    }
+
+  }
+  .footer_copyright {
+    background: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    height: 52px;
+
+    .copyright {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #7A7A7A;
+      margin-top: 17px;
     }
   }
 }
 
-// less 12 01:07:00 рек як доробляти!!!
-// спитати в Ігоря, чому не працюють падінги для контейнера
+//  спитати про падінги і маржіни в item1-7 як вибирати???
 
+//  footer follow!!!!
 
 // 09-19-22-06 14:48
