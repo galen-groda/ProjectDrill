@@ -371,33 +371,82 @@ a {
 }
 .trending .trending_container .trending_items {
   display: flex;
-  justify-content: space-between;
   background: #FFFFFF;
   border: 0.5px solid #E2E0DB;
   margin-bottom: 48px;
+  min-height: 148px;
+}
+@media (max-width: 768px) {
+  .trending .trending_container .trending_items {
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
 }
 .trending .trending_container .trending_items .item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 21px;
+  flex: 1 1 15%;
+  transition: all 0.8s ease-in-out;
 }
-.trending .trending_container .trending_items .item:first-child {
+.trending .trending_container .trending_items .item:hover {
+  transition: all 0.8s ease-in-out;
   background: #FBF9F3;
 }
-.trending .trending_container .trending_items .item:last-child {
-  margin-right: 43px;
+.trending .trending_container .trending_items .item:hover .name_item {
+  color: #505050;
+}
+.trending .trending_container .trending_items .item:hover svg {
+  fill: #4F4E4E;
+}
+@media (max-width: 768px) {
+  .trending .trending_container .trending_items .item {
+    flex: 1 1 30%;
+    padding: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .trending .trending_container .trending_items .item {
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 360px) {
+  .trending .trending_container .trending_items .item {
+    flex: 1 1 45%;
+    padding: 20px 10px;
+  }
 }
 .trending .trending_container .trending_items .item .name_item {
-  height: 19px;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
-  letter-spacing: -0.035em;
-  color: #505050;
+  display: flex;
+  align-items: center;
   text-align: center;
-  margin-bottom: 20px;
+  letter-spacing: -0.035em;
+  color: #757575;
+}
+.trending .trending_container .trending_items .item svg {
+  fill: #757575;
+}
+.trending .trending_container .trending_items .item .item_item1 {
+  margin-bottom: 12.6px;
+}
+.trending .trending_container .trending_items .item .item_item2 {
+  margin-bottom: 13.4px;
+}
+.trending .trending_container .trending_items .item .item_item3 {
+  margin-bottom: 17.6px;
+}
+.trending .trending_container .trending_items .item .item_item4 {
+  margin-bottom: 16.4px;
+}
+.trending .trending_container .trending_items .item .item_item5 {
+  margin-bottom: 14px;
+}
+.trending .trending_container .trending_items .item .item_item6 {
+  margin-bottom: 24px;
 }
 .trending .trending_container .trending_products .products_items {
   display: flex;
