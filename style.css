@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Federo&family=Inter&family=Open+Sans:wght@300;400;600&family=Potta+One&display=swap");
-.seller .seller_container .seller_items .item .seller_icons .icon:hover, .seller .seller_container .seller_items .item .seller_icons .icon, .home .home_container .home_info a:hover, .home .home_container .home_info a, .header .header_container .header_icons svg:hover, .header .header_container .header_icons svg, .header .header_container .header_nav .header_list a:hover, .header .header_container .header_nav .header_list a {
+.trending .trending_container .trending_products .products_items .product .product_icons .icon:hover, .trending .trending_container .trending_products .products_items .product .product_icons .icon, .seller .seller_container .seller_items .item .seller_icons .icon:hover, .seller .seller_container .seller_items .item .seller_icons .icon, .home .home_container .home_info a:hover, .home .home_container .home_info a, .header .header_container .header_icons svg:hover, .header .header_container .header_icons svg, .header .header_container .header_nav .header_list a:hover, .header .header_container .header_nav .header_list a {
   transition: all 0.8s ease;
 }
 
@@ -350,6 +350,133 @@ a {
   align-items: center;
   background: #FFFFFF;
   border: 0.1px solid #000000;
+}
+
+.trending {
+  margin-bottom: 142px;
+}
+.trending .trending_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.trending .trending_container .trending_name {
+  font-family: "Federo";
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  color: #3A3A3A;
+  text-align: center;
+  margin-bottom: 78px;
+}
+.trending .trending_container .trending_items {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border: 0.5px solid #E2E0DB;
+  margin-bottom: 48px;
+}
+.trending .trending_container .trending_items .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 21px;
+}
+.trending .trending_container .trending_items .item:first-child {
+  background: #FBF9F3;
+}
+.trending .trending_container .trending_items .item:last-child {
+  margin-right: 43px;
+}
+.trending .trending_container .trending_items .item .name_item {
+  height: 19px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.035em;
+  color: #505050;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.trending .trending_container .trending_products .products_items {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.trending .trending_container .trending_products .products_items .product {
+  height: 342px;
+  flex: calc(25% - 30px);
+  background: #FFFFFF;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 60px 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.trending .trending_container .trending_products .products_items .product div {
+  margin: 0 auto;
+}
+.trending .trending_container .trending_products .products_items .product .product_text h3 {
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.035em;
+  color: #2A2A2B;
+  margin-bottom: 8px;
+}
+.trending .trending_container .trending_products .products_items .product .product_text p {
+  font-family: "Federo";
+  font-size: 14px;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  color: #8C8C8C;
+  text-align: center;
+}
+.trending .trending_container .trending_products .products_items .product .product_icons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  right: 5px;
+  bottom: 119px;
+}
+.trending .trending_container .trending_products .products_items .product .product_icons .icon {
+  height: 27px;
+  width: 27px;
+  background: #FFFFFF;
+  border: 0.2px solid #454545;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trending .trending_container .trending_products .products_items .product .product_icons .icon .icon1 {
+  display: flex;
+  flex-direction: column;
+}
+.trending .trending_container .trending_products .products_items .product .product_icons .icon .icon1 svg {
+  fill: black;
+}
+.trending .trending_container .trending_products .products_items .product .product_icons .icon svg {
+  fill: black;
+}
+.trending .trending_container .trending_products .products_items .product .product_icons .icon:hover {
+  background-color: #d7676b;
+}
+.trending .trending_container .trending_products .products_items .product .product_icons .icon:hover svg {
+  fill: white;
+}
+.trending .trending_container .trending_products .products_items .product1 {
+  padding: 57px 48px 0 48px;
+}
+.trending .trending_container .trending_products .products_items .product2 {
+  padding: 70px 61px 119px;
+}
+.trending .trending_container .trending_products .products_items .product3 {
+  padding: 71px 50px 119px;
+}
+.trending .trending_container .trending_products .products_items .product4 {
+  padding: 70px 0 25px;
 }
 
 .footer {
